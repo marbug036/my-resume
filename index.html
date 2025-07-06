@@ -4,9 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mark Anthony Bugtong - Resume</title>
-<!-- Google Fonts for a clean look -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+<!-- Google Fonts for a sleek, modern font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 <style>
+  /* Reset and base styles */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -14,15 +15,15 @@
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #fafafa;
-    color: #333;
+    color: #222;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   a {
-    color: #0066cc;
+    color: #0077b6;
     text-decoration: none;
   }
 
@@ -30,166 +31,199 @@
     text-decoration: underline;
   }
 
+  /* Container for overall layout */
   .container {
-    max-width: 900px;
-    margin: 20px auto;
+    max-width: 1080px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
   }
 
-  /* Header styles */
-  header {
-    text-align: center;
-    margin-bottom: 20px;
+  /* Sidebar for profile info */
+  .sidebar {
+    background-color: #e8dedb;
+    padding: 30px 25px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .profile-photo {
-    width: 150px;
-    height: 150px;
+  .profile-img {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #2980b9;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 3px solid #0077b6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+
+  .name {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+  }
+
+  .info {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  /* Main content styles */
+  .main {
+    flex: 1;
+    padding: 35px 30px;
+  }
+
+  section {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    border-bottom: 3px solid #0077b6;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    color: #222;
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #444;
+  }
+
+  p {
+    font-size: 0.95em;
     margin-bottom: 10px;
   }
 
-  h1 {
-    font-size: 2em;
-    color: #2c3e50;
-    margin-bottom: 5px;
+  ul {
+    list-style: inside disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
   }
 
-  .contact-info {
-    font-size: 0.9em;
-    color: #555;
+  /* Responsive adjustments */
+  @media(max-width: 768px){
+    .container {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 10px;
+    }
+    .profile-img {
+      margin-bottom: 0;
+    }
   }
-
-  /* Section styles */
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.5em;
-  color: #34495e;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-h3 {
-  font-size: 1.1em;
-  color: #2c3e50;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-p {
-  margin-bottom: 8px;
-}
-
-ul {
-  list-style: disc inside;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* Compact adjustments for smaller screens */
-@media(max-width: 600px){
-  body {
-    font-size: 13px;
-  }
-}
 </style>
 </head>
 <body>
 <div class="container">
-  <!-- HEADER -->
-  <header>
-    <img src="resumepic.jpg" alt="Profile Photo" class="profile-photo" />
-    <h1>Mark Anthony Bugtong</h1>
-    <div class="contact-info">
-      <p>Age: 27 | Birthdate: Jan 20, 1998 | Height: 168 cm</p>
-      <p>
-        Phone: <a href="tel:09214884252">0921 488 4252</a> | 
-        Email: <a href="mailto:anthonybugtong@gmail.com">anthonybugtong@gmail.com</a>
-      </p>
-      <p>Address: Baguio City</p>
+  <!-- Sidebar with profile info -->
+  <div class="sidebar">
+    <img src="resumepic.jpg" alt="Profile Photo" class="profile-img" />
+    <div class="info">
+      <div class="name">Mark Anthony Bugtong</div>
+      <div>Age: 27</div>
+      <div>Birthdate: Jan 20, 1998</div>
+      <div>Height: 168 cm</div>
+      <div>Gender: Male</div>
+      <div>Nationality: Filipino</div>
+      <div style="margin-top:15px;">
+        <div>Phone: <a href="tel:09214884252">0921 488 4252</a></div>
+        <div>Email: <a href="mailto:anthonybugtong@gmail.com">anthonybugtong@gmail.com</a></div>
+        <div>Address: Baguio City, Philippines</div>
+      </div>
+      <!-- Skills placed directly below address -->
+      <div style="margin-top:20px;">
+        <h2 style="font-size:1.2em; border-bottom:none; padding-bottom:0; margin-bottom:8px;">Skills</h2>
+        <ul style="list-style: inside disc; padding-left:15px;">
+          <li>Guest relations & customer service</li>
+          <li>Strong communication</li>
+          <li>MS Excel, PowerPoint, data visualization</li>
+          <li>Experience in high-rated hotels & F&B</li>
+          <li>Languages: English & Tagalog</li>
+          <li>Adaptable, quick learner, positive attitude</li>
+          <li>Multitask & work under pressure</li>
+        </ul>
+      </div>
     </div>
-  </header>
-
-  <!-- OBJECTIVE -->
-  <section>
-    <h2>Objective</h2>
-    <p>Dedicated hospitality professional with extensive experience in hotel operations, guest services, and data analysis. Committed to delivering exceptional guest experiences and operational excellence. Eager to contribute my skills and positive attitude to Macau hotels.</p>
-  </section>
-
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education</h2>
-    <h3>Bachelor of Forensic Science</h3>
-    <p>University of Baguio, 2014–2017</p>
-  </section>
-
-  <!-- WORK EXPERIENCE -->
-  <section>
-    <h2>Work Experience</h2>
-
-    <h3>Kitchen Helper</h3>
-    <p><strong>Venus Parkview Hotel, Baguio</strong> | 2019–2021</p>
-    <ul>
-      <li>Supported food prep & sanitation</li>
-      <li>Maintained hygiene standards</li>
-    </ul>
-
-    <h3>Room Attendant</h3>
-    <p><strong>The Manor Hotel, Baguio</strong> | 2021–2022</p>
-    <ul>
-      <li>Cleaned and organized guest rooms</li>
-      <li>Replenished amenities</li>
-      <li>Provided guest assistance</li>
-    </ul>
-
-    <h3>Bellman / Concierge</h3>
-    <p><strong>Azalea Hotels & Residences, Baguio</strong> | 2022–2024</p>
-    <ul>
-      <li>Luggage and transportation help</li>
-      <li>Guest info & local attraction guidance</li>
-      <li>Resolved issues promptly</li>
-      <li>Personalized guest service</li>
-    </ul>
-
-    <h3>Reports Analyst</h3>
-    <p><strong>Foundever, Baguio</strong> | Present</p>
-    <ul>
-      <li>Data analysis & reporting</li>
-      <li>Monitor KPIs & insights</li>
-      <li>Collaborate for improvements</li>
-      <li>Develop visual reports</li>
-      <li>Ensure data integrity</li>
-    </ul>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Guest relations & customer service</li>
-      <li>Strong communication</li>
-      <li>MS Excel, PowerPoint, data visualization</li>
-      <li>Experience in high-rated hotels & F&B</li>
-      <li>Languages: English & Tagalog</li>
-      <li>Adaptable, quick learner, positive attitude</li>
-      <li>Multitask & work under pressure</li>
-    </ul>
-  </section>
+  </div>
+  
+  <!-- Main content -->
+  <div class="main">
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>Passionate hospitality professional with extensive experience in hotel operations, guest services, and data analysis. Dedicated to delivering exceptional guest experiences and operational excellence. Eager to contribute my skills and positive attitude to Macau hotels.</p>
+    </section>
+    
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <h3>Bachelor of Forensic Science</h3>
+      <p>University of Baguio, 2014–2017</p>
+    </section>
+    
+    <!-- Work Experience -->
+    <section>
+      <h2>Work Experience</h2>
+      
+      <h3>Kitchen Helper</h3>
+      <p><strong>Venus Parkview Hotel, Baguio</strong> | 2019–2021</p>
+      <ul>
+        <li>Supported food prep & sanitation</li>
+        <li>Maintained hygiene standards</li>
+      </ul>
+      
+      <h3>Room Attendant</h3>
+      <p><strong>The Manor Hotel, Baguio</strong> | 2021–2022</p>
+      <ul>
+        <li>Cleaned and organized guest rooms</li>
+        <li>Replenished amenities</li>
+        <li>Provided guest assistance</li>
+      </ul>
+      
+      <h3>Bellman / Concierge</h3>
+      <p><strong>Azalea Hotels & Residences, Baguio</strong> | 2022–2024</p>
+      <ul>
+        <li>Luggage and transportation help</li>
+        <li>Guest info & local attraction guidance</li>
+        <li>Resolved issues promptly</li>
+        <li>Personalized guest service</li>
+      </ul>
+      
+      <h3>Reports Analyst</h3>
+      <p><strong>Foundever, Baguio</strong> | Present</p>
+      <ul>
+        <li>Data analysis & reporting</li>
+        <li>Monitor KPIs & insights</li>
+        <li>Collaborate for improvements</li>
+        <li>Develop visual reports</li>
+        <li>Ensure data integrity</li>
+      </ul>
+    </section>
+  </div>
 </div>
 </body>
 </html>
